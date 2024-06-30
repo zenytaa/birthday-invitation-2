@@ -149,8 +149,8 @@ const LandingPage = () => {
               </ConfettiWrapper>
             )}
             <ButtonWrapper>
-              <Button>
-                <Image src={envelopeIcon} onClick={() => navigate("/home")} />
+              <Button onClick={() => navigate("/home")}>
+                <Image src={envelopeIcon} />
               </Button>
               <ConfettiButton
                 onClick={handleClick}
