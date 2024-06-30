@@ -16,6 +16,7 @@ const PlayBackButton = styled.button`
   z-index: 999;
   opacity: 0.7;
   border: none;
+  cursor: pointer;
 
   @media (min-width: 769px) {
     right: 40px;

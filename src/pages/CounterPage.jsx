@@ -64,7 +64,7 @@ const CounterPage = () => {
   let interval = useRef();
 
   const startTimer = () => {
-    const countdownDate = new Date("July 07 2024 00:00:00").getTime();
+    const countdownDate = new Date("July 05 2024 14:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -100,8 +100,8 @@ const CounterPage = () => {
       <CounterSection>
         <HeaderWrapper column>
           <Header fontSize="1rem">Kapan nih acaranya?</Header>
-          <Header fontSize="1.5rem">7 July 2024</Header>
-          <Header fontSize="1rem">15:00 WIB</Header>
+          <Header fontSize="1.5rem">5 July 2024</Header>
+          <Header fontSize="1rem">14:00 WIB</Header>
         </HeaderWrapper>
         <CounterContainer>
           <Counter>

@@ -15,8 +15,8 @@ const Maps = () => {
   };
 
   const center = {
-    lat: -7.425398,
-    lng: 109.248358,
+    lat: -7.425371021888438,
+    lng: 109.2484794810789,
   };
 
   const api = import.meta.env.VITE_GOOGLE_MAP_API_KEY;
@@ -27,7 +27,7 @@ const Maps = () => {
         fullscreenControl={false}
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={17}
+        zoom={18}
       >
         <MarkerF position={center} />
         {open && (

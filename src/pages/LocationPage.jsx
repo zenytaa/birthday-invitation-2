@@ -34,7 +34,7 @@ const DetailContainer = styled(Container)`
   ul {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 10px;
     list-style-type: none;
     ${fontFamily.secondary};
     color: #f8f8f8;
@@ -44,12 +44,11 @@ const DetailContainer = styled(Container)`
 
     @media (min-width: 769px) {
       justify-content: center;
-      gap: 40px;
+      gap: 15px;
     }
 
     li {
       font-weight: 600;
-      gap: 10px;
       text-align: center;
 
       img {
@@ -78,13 +77,14 @@ const LocationPage = () => {
           <li>
             <Button
               onClick={() =>
-                openMapInNewTab("https://maps.app.goo.gl/MxumkJkScZmTiUi7A")
+                openMapInNewTab("https://maps.app.goo.gl/RUdXuDsvFGbtRWw2A")
               }
             >
               <span>Buka Maps</span>
             </Button>
           </li>
-          <li>Jalan Bridgen Katamso</li>
+          <li>Jalan Brigjen Katamso, LPK Pribadi, Purwokerto Timur</li>
+          <li>(Belakang Bekas Toko Benang Raja)</li>
         </ul>
       </DetailContainer>
     </LocationSection>

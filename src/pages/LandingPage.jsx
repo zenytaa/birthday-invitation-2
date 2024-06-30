@@ -14,7 +14,6 @@ import { ConfettiWrapper } from "../components/Confetti";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import confettiAnimationData from "../assets/lottie/confetti-animation.json";
-import { FixedButton } from "./HomePage";
 import BackgroundMusic from "../components/BackgroundMusic";
 import backgroundMusicFile from "../assets/backgroundMusicFile.mp3";
 import Ballons from "../components/Ballons";
@@ -40,7 +39,26 @@ const ButtonWrapper = styled.div`
   width: 100%;
   gap: 20px;
   justify-content: center;
-  padding-left: 65px;
+`;
+
+const ConfettiButton = styled.button`
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  align-self: center;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 999;
+  opacity: 0.7;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: 769px) {
+    right: 40px;
+    height: 60px;
+    width: 60px;
+  }
 `;
 
 const LandingPage = () => {
@@ -113,23 +131,16 @@ const LandingPage = () => {
               </ConfettiWrapper>
             )}
             <ButtonWrapper>
-              <Button style={{ height: "47px" }}>
+              <Button>
                 <Image src={envelopeIcon} onClick={() => navigate("/home")} />
               </Button>
-              <FixedButton
-                style={{
-                  position: "static",
-                  height: "47px",
-                  width: "47px",
-                  bottom: "0",
-                  right: "0",
-                }}
+              <ConfettiButton
                 onClick={handleClick}
                 disable={animationActive}
                 key={confettiKey}
               >
-                <Image src={confettiIcon} />
-              </FixedButton>
+                <Image style={{ height: "65%" }} src={confettiIcon} />
+              </ConfettiButton>
             </ButtonWrapper>
           </LandingContainer>
         </Section>

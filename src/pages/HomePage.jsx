@@ -33,9 +33,10 @@ export const FixedButton = styled(Button)`
   align-self: center;
   position: fixed;
   bottom: 30px;
-  right: 18px;
+  right: 20px;
   z-index: 999;
   opacity: 0.7;
+
   @media (min-width: 769px) {
     right: 40px;
     height: 60px;
