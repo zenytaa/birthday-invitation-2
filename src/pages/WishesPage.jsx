@@ -30,7 +30,7 @@ const WishesPage = () => {
         <HeaderWrapper>
           <Header fontSize="1.5rem">Aku Harap ..</Header>
         </HeaderWrapper>
-        <p>Kirim Harapanmu Untuk Ara dan Ina Yuk!</p>
+        <p>Kirim Harapanmu Untuk Ina dan Ara Yuk!</p>
         <WishesForm />
       </WishesContainer>
     </WishesSection>

@@ -24,6 +24,7 @@ const MapContainer = styled.div`
   margin-top: 16px;
   margin-bottom: 16px;
   padding: 0;
+  border-radius: 10px;
 `;
 
 const DetailContainer = styled(Container)`

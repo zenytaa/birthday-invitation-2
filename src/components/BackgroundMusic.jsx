@@ -1,9 +1,21 @@
 import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import muteSound from "../assets/mute.svg";
 import unmuteSound from "../assets/unmute.svg";
 import { Image } from "./Image";
+
+const pressAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const PlayBackButton = styled.button`
   height: 50px;
@@ -22,6 +34,10 @@ const PlayBackButton = styled.button`
     right: 40px;
     height: 60px;
     width: 60px;
+  }
+
+  &:active {
+    animation: ${pressAnimation} 0.2s ease-in-out;
   }
 `;
 

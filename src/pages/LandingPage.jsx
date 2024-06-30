@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import cakeImg from "../assets/cake.svg";
 import envelopeIcon from "../assets/envelope.svg";
@@ -41,6 +41,18 @@ const ButtonWrapper = styled.div`
   justify-content: center;
 `;
 
+const pressAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 const ConfettiButton = styled.button`
   height: 50px;
   width: 50px;
@@ -54,10 +66,16 @@ const ConfettiButton = styled.button`
   border: none;
   cursor: pointer;
 
+  transform: scaleX(-1);
+
   @media (min-width: 769px) {
     right: 40px;
     height: 60px;
     width: 60px;
+  }
+
+  &:active {
+    animation: ${pressAnimation} 0.2s ease-in-out;
   }
 `;
 
@@ -76,7 +94,7 @@ const LandingPage = () => {
     const confettiTimer = setTimeout(() => {
       setShowConfetti(false);
       setAnimationActive(false);
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(confettiTimer);
   }, []);
@@ -95,7 +113,7 @@ const LandingPage = () => {
     const confettiTimer = setTimeout(() => {
       setShowConfetti(false);
       setAnimationActive(false);
-    }, 5000);
+    }, 4000);
 
     return () => {
       clearTimeout(shakeTimer);

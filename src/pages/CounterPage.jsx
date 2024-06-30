@@ -18,6 +18,7 @@ const CounterSection = styled(Section)`
 const CounterContainer = styled(Container)`
   height: 100%;
   border: 1px solid white;
+  border-radius: 10px;
   margin-top: 20px;
   margin-bottom: 10px;
   padding: 10px 20px;

@@ -4,7 +4,7 @@ import homeButton from "../assets/home.svg";
 import { fontFamily } from "../assets/styles/font";
 
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Image } from "../components/Image";
 import { useNavigate } from "react-router-dom";
 import { Frame, Picture } from "../components/Frame";
@@ -26,6 +26,18 @@ import backgroundMusicFile from "../assets/backgroundMusicFile.mp3";
 
 import ToastAlert from "../components/ToastAlert";
 
+const pressAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 export const FixedButton = styled(Button)`
   height: 50px;
   width: 50px;
@@ -41,6 +53,10 @@ export const FixedButton = styled(Button)`
     right: 40px;
     height: 60px;
     width: 60px;
+  }
+
+  &:active {
+    animation: ${pressAnimation} 0.2s ease-in-out;
   }
 `;
 
