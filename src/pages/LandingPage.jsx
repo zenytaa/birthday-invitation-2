@@ -149,7 +149,10 @@ const LandingPage = () => {
               </ConfettiWrapper>
             )}
             <ButtonWrapper>
-              <Button onClick={() => navigate("/home")}>
+              <Button
+                style={{ zIndex: "11111" }}
+                onClick={() => navigate("/home")}
+              >
                 <Image src={envelopeIcon} />
               </Button>
               <ConfettiButton
