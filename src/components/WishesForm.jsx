@@ -4,6 +4,8 @@ import { fontFamily } from "../assets/styles/font";
 import { Button } from "./Button";
 import { toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
+
 const WishBoxForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -88,6 +90,8 @@ const WishesForm = () => {
 
     const url = import.meta.env.VITE_GOOGLE_SHEET_LINK;
 
+    const toastId = toast.loading("🚀🚀 Mengirim ...");
+
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -100,9 +104,15 @@ const WishesForm = () => {
           name: "",
           message: "",
         });
+        toast.update(toastId, { autoClose: 1, isLoading: false });
         toast("😆 Yeay!! Berhasil terkirim ...");
       } else {
-        toast.error("Hmm ada kesalahan dari kami, coba lagi ya!");
+        toast.update(toastId, {
+          render: "Hmm ada kesalahan dari kami, coba lagi ya!",
+          type: "error",
+          isLoading: false,
+          autoClose: 5000,
+        });
       }
     } catch (error) {
       console.error("Error sending data:", error);
