@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container, Section } from "../components/Container";
 import { Header, HeaderWrapper } from "../components/Header";
-// import Maps from "../components/Maps";
+import Maps from "../components/Maps";
 
 import { fontFamily } from "../assets/styles/font";
 import { Button } from "../components/Button";
@@ -17,14 +17,14 @@ const LocationSection = styled(Section)`
   }
 `;
 
-// const MapContainer = styled.div`
-//   height: 330px;
-//   width: 80%;
-//   border: 0.5px solid white;
-//   margin-top: 16px;
-//   margin-bottom: 16px;
-//   padding: 0;
-// `;
+const MapContainer = styled.div`
+  height: 330px;
+  width: 80%;
+  border: 0.5px solid white;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 0;
+`;
 
 const DetailContainer = styled(Container)`
   height: 100%;
@@ -70,9 +70,9 @@ const LocationPage = () => {
       <HeaderWrapper column>
         <Header fontSize="1rem">Lokasinya di mana?</Header>
       </HeaderWrapper>
-      {/* <MapContainer>
+      <MapContainer>
         <Maps />
-      </MapContainer> */}
+      </MapContainer>
       <DetailContainer>
         <ul>
           <li>
@@ -84,9 +84,6 @@ const LocationPage = () => {
               <span>Buka Maps</span>
             </Button>
           </li>
-          {/* <li>
-            <img src={pinPoint} />
-          </li> */}
           <li>Jalan Bridgen Katamso</li>
         </ul>
       </DetailContainer>
